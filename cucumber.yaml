@@ -1,11 +1,9 @@
 ---
-url: "https://demo.cs-cart.com"
 ##default para executar localmente
 default: -p html -p chrome -p pretty -p headless
 
 #default: -p dev_toolbox -p firefox -p html -p progress
-#ci: -p dev_toolbox -p headless -p json -p pretty
-ci: -p headless -p json -p pretty
+ci: -p dev -p headless -p json -p pretty
 
 
 dev: ENV_TYPE=dev

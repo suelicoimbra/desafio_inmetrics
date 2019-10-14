@@ -6,10 +6,9 @@ require "capybara/cucumber"
 require "site_prism"
 require "pry"
 
-CONFIG = YAML.load_file(File.join(Dir.pwd, "/cucumber.yaml"))
+#CONFIG = YAML.load_file(File.join(Dir.pwd, "/cucumber.yaml"))
 
-#Setando a configuração do driver como padrão
-Capybara.default_driver = :selenium
+CONFIG = YAML.load_file(File.join(Dir.pwd, "features/support/config/dev.yaml"))
 
 case ENV["BROWSER"]
 when "firefox"
