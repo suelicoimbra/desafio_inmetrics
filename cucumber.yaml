@@ -1,11 +1,14 @@
 ---
-#default: -p html -p dot -p headless
-default: -p html -p bdd -p headless
-
-ci: -p dev -p headless -p json -p pretty
+#default: -p html -p bdd -p headless
+default: -p dev_toolbox -p firefox -p html -p progress
+ci: -p dev_toolbox -p headless -p json -p pretty
 dev: ENV_TYPE=dev
-bdd: --format pretty
-dot: --format progress
-html: --format html --out=log/features.html
-json: --format json --out=log/features.json
+dev_toolbox: ENV_TYPE=dev_toolbox
+hmg: ENV_TYPE=hmg
+firefox: BROWSER=firefox
+chrome: BROWSER=chrome
 headless: BROWSER=headless
+html: --format html --out=log/report.html
+json: --format json --out=log/report.json
+pretty: --format pretty
+progress: --format progress
