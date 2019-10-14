@@ -2,7 +2,6 @@ pipeline {
     agent {
         docker{
             image "ruby:alpine" //distribuição linux leve
-            args "--network=skynet"
         }
     } 
     stages {
