@@ -2,7 +2,7 @@
 #default: -p html -p dot -p headless
 default: -p html -p bdd -p headless
 
-ci: -p json -p dot
+ci: -p dev -p headless -p json -p pretty
 bdd: --format pretty
 dot: --format progress
 html: --format html --out=log/features.html
